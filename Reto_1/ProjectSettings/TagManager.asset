@@ -4,8 +4,14 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< Updated upstream
   - Dot
   - Cherry
+=======
+  - Enemy
+  - MazeGeo
+  - Dot
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
@@ -13,7 +19,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Player
+  - 
   - 
   - 
   - 
