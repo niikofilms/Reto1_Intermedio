@@ -10,7 +10,7 @@ public class CherryPrueba : MonoBehaviour
     public TMP_Text scoreText;
     public TMP_Text winText;
     private int dotsCollected = 0;
-    public int dotsTarget = 2;
+    public int dotsTarget = 15;
     public GameObject cherryObject;
     private bool gano = false;
 
@@ -29,23 +29,23 @@ public class CherryPrueba : MonoBehaviour
             dotsCollected++;
             UpdateScoreText();
 
-            if (dotsCollected >= dotsTarget)
+            if (dotsCollected == dotsTarget)
 
             {
                 cherryObject.SetActive(true);
 
-                if (winText != null)
-                {
-                   if (dotsTarget == 2)
-                    {
-                        scoreText.text = "¡Ganaste!";
-
-                    }
-                        
-                }
             }
         }
-
+        
+        if (other.gameObject.CompareTag("Cherry"))
+        {
+            Destroy(other.gameObject);
+            
+            if (winText != null)
+            {
+                winText.text = "¡Ganaste!";
+            }
+        }
     }
 
    

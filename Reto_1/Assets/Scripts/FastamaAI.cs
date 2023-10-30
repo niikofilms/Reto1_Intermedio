@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class FastamaAI : MonoBehaviour
@@ -18,12 +19,14 @@ public class FastamaAI : MonoBehaviour
     public int destinationAmount;
     public Vector3 rayCastOffset;
     public string deathScene, sceneToLoad;
+    AudioSource scream;
 
     void Start()
     {
         flying = true;
         randNum = Random.Range(0, destinationAmount);
         currentDest = destinations[randNum];
+        scream = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -111,6 +114,7 @@ public class FastamaAI : MonoBehaviour
     IEnumerator deathRoutine()
     {
         // Activar la animacion de muerte y cargar nuevamente la escena despues de morir.
+        scream.Play();
         yield return new WaitForSeconds(jumpscareTime);
         SceneManager.LoadScene(deathScene);
         SceneManager.LoadScene(sceneToLoad);

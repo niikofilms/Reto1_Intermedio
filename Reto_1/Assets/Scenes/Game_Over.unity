@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 12169746}
   - component: {fileID: 12169745}
   - component: {fileID: 12169748}
+  - component: {fileID: 12169749}
   m_Layer: 5
   m_Name: Btn_Si
   m_TagString: Untagged
@@ -210,7 +211,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 12169748}
         m_TargetAssemblyTypeName: CambiarNivel, Assembly-CSharp
-        m_MethodName: CambiarEscena
+        m_MethodName: CambiarEscenaJuego
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -270,6 +271,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a20ed599ad16c2140bdc8105f524d284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  juegoPausado: {fileID: 12169749}
+--- !u!114 &12169749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12169742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18e520efb57114d4583aa56089ad8b31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  juegoPausado: 0
+  pauseUI: {fileID: 0}
+  escenaActual: 
 --- !u!1 &118607226
 GameObject:
   m_ObjectHideFlags: 0
@@ -959,7 +976,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2005894047}
         m_TargetAssemblyTypeName: CambiarNivel, Assembly-CSharp
-        m_MethodName: CambiarEscena
+        m_MethodName: CambiarEscenaMenu
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1019,6 +1036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a20ed599ad16c2140bdc8105f524d284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  juegoPausado: {fileID: 0}
 --- !u!1 &2019784300
 GameObject:
   m_ObjectHideFlags: 0
