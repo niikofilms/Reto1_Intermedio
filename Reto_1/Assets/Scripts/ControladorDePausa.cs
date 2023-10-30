@@ -7,27 +7,27 @@ public class ControladorDePausa : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)) // Pausar el juego al presionar la tecla Escape
+        if (Input.GetKeyDown(KeyCode.P)) // Pausar el juego al presionar la tecla Escape
         {
             if (juegoPausado)
             {
-                ResumeGame();
+                ResumeGame(pauseUI);
             }
             else
             {
-                PauseGame();
+                PauseGame(pauseUI);
             }
         }
     }
 
-    void PauseGame()
+    public void PauseGame(GameObject pauseUI)
     {
         pauseUI.SetActive(true);
         Time.timeScale = 0; // Pausar el tiempo del juego
         juegoPausado = true;
     }
 
-    void ResumeGame()
+    public void ResumeGame(GameObject pauseUI)
     {
         pauseUI.SetActive(false);
         Time.timeScale = 1; // Reanudar el tiempo del juego
@@ -38,11 +38,11 @@ public class ControladorDePausa : MonoBehaviour
     {
         if (juegoPausado)
         {
-            ResumeGame();
+            ResumeGame(pauseUI);
         }
         else
         {
-            PauseGame();
+            PauseGame(pauseUI);
         }    
     }
 }
