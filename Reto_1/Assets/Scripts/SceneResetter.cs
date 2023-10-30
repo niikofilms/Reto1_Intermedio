@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class SceneResetter : MonoBehaviour
 {
+    private void Start()
+    {
+        
+    }
     public void ResetScene()
     {
         // Obtiene el índice de la escena actual y la recarga

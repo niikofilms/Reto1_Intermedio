@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Reto 1.unity
     guid: 20b081018ba0f47448c496736010c0f1
+  - enabled: 1
+    path: Assets/Scenes/Game_Over.unity
+    guid: 7b682a91f93484747932915aa4b452ac
   m_configObjects: {}

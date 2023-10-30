@@ -17,7 +17,7 @@ public class FastamaAI : MonoBehaviour
     int randNum;
     public int destinationAmount;
     public Vector3 rayCastOffset;
-    public string deathScene;
+    public string deathScene, sceneToLoad;
 
     void Start()
     {
@@ -113,5 +113,9 @@ public class FastamaAI : MonoBehaviour
         // Activar la animacion de muerte y cargar nuevamente la escena despues de morir.
         yield return new WaitForSeconds(jumpscareTime);
         SceneManager.LoadScene(deathScene);
+        SceneManager.LoadScene(sceneToLoad);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
     }
 }
