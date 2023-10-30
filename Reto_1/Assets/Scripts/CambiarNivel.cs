@@ -14,7 +14,7 @@ public class CambiarNivel : MonoBehaviour
 
     public void CambiarEscenaJuego (string juego)
     {
-        juegoPausado.juegoPausado = false;
+        juegoPausado.ResetScene();
         SceneManager.LoadScene(juego);
     }
 

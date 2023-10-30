@@ -22,7 +22,7 @@ public class ControladorDePausa : MonoBehaviour
         }
     }
 
-    void PauseGame()
+    public void PauseGame()
     {
         pauseUI.SetActive(true);
         Time.timeScale = 0; // Pausar el tiempo del juego
@@ -31,7 +31,7 @@ public class ControladorDePausa : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
     }
 
-    void ResumeGame()
+    public void ResumeGame()
     {
         pauseUI.SetActive(false);
         Time.timeScale = 1; // Reanudar el tiempo del juego
